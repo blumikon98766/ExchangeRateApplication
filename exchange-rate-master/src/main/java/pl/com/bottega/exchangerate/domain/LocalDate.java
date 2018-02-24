@@ -1,4 +1,4 @@
-package pl.com.bottega.exchangerate.domain.commands;
+package pl.com.bottega.exchangerate.domain;
 
 import java.time.LocalDateTime;
 import java.time.LocalTime;

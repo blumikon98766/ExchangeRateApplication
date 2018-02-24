@@ -26,15 +26,15 @@ public class ExchangeRateRepositoriesApplicationTests {
     @Autowired
     private MockMvc mvc;
 
-    @Autowired
-    private DbCleaner dbCleaner;
+//    @Autowired
+//    private AcceptanceTest acceptanceTest;
 
     @Autowired
     private ObjectMapper objectMapper;
 
     @Before
     public void cleanDb() {
-        dbCleaner.clean();
+        //dbCleaner.clean();
     }
 
     @Test

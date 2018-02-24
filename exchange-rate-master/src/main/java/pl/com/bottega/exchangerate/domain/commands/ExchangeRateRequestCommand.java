@@ -5,13 +5,30 @@ import java.time.LocalDate;
 
 public class ExchangeRateRequestCommand implements Command{
 
+   // private Long id;
     private LocalDate date;
     private String currency;
     private BigDecimal rate;
 
-    public ExchangeRateRequestCommand() {
+//    public ExchangeRateRequestCommand() {
+//    }
+
+
+    public void validate(ValidationErrors errors){
+        //validatePresence(errors,"id",id);
+        validatePresence(errors,"date", date);
+        validatePresence(errors,"currency", currency);
+        validatePresence(errors,"rate", rate);
     }
 
+
+//    public Long getId() {
+//        return id;
+//    }
+//
+//    public void setId(Long id) {
+//        this.id = id;
+//    }
     public LocalDate getDate() {
         return date;
     }

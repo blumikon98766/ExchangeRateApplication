@@ -7,26 +7,30 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-@Entity
+@Entity(name = "exchange_rate")
 public class ExchangeRate {
 
     @Id
     @GeneratedValue
     private Long id;
 
-    @Column
+    @Column(name = "local_date")
     private LocalDate localDate;
 
     @Column
     private String currency;
 
-    @Column
-    BigDecimal rate;
+    @Column(precision = 10, scale = 6)
+    private BigDecimal rate;
 
     public ExchangeRate(ExchangeRateRequestCommand command) {
+//        this.id = command.getId();
         this.localDate = command.getDate();
         this.currency = command.getCurrency();
         this.rate = command.getRate();
+    }
+
+    public ExchangeRate() {
     }
 
     public Long getId() {

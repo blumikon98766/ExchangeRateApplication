@@ -1,5 +1,7 @@
 package pl.com.bottega.exchangerate.domain.commands;
 
+import pl.com.bottega.exchangerate.domain.LocalDate;
+
 import java.text.DateFormatSymbols;
 import java.util.Arrays;
 import java.util.List;
@@ -12,7 +14,8 @@ import java.util.stream.Collectors;
 public interface Command {
 
     default void validate(ValidationErrors validationErrors) {
-
+//        validationErrors.add(validationErrors.getMessage(),"can't be blank");
+    //TODO
     }
 
     default void validateDuplicatte(ValidationErrors errors, String field, List<String> list) {
